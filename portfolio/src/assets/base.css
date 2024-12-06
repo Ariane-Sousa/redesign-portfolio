@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap');
+
+:root {
+  --color-background: #121212;
+  --color-background-soft: #1E1E1F;
+  --color-background-navbar: #282829;
+  --color-background-button: #2B2B2C;
+  --color-background-icon: #202022;
+
+  --color-border: #383838;
+
+  --color-text-title: #F6F6F6;
+  --color-text-subtitle: var(--vt-c-text-light-1);
+  --color-text-paragraph: #D6D6D6;
+  --color-text-title-contacts: #959595;
+  --color-text-info-contacts: #C0C0C0;
+  --color-text-primary: #BA14E9;
+  --color-text-navbar: #C3C3C3;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-background);
+  font-family: 'Figtree', sans-serif;
+}
+
+header {
+  display: flex;
+  gap: 3.75rem;
+}
+
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+.container-router {
+  background-color: var(--color-background-soft);
+  width: 59.625rem;
+  height: 49.938rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 1.125rem;
+  right: 2.563rem;
+  display: flex;
+  background-color: var(--color-background-navbar);
+  width: 15.875rem;
+  height: 2.813rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  gap: 2.188rem;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: var(--color-text-navbar);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .router-link-active {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+}
