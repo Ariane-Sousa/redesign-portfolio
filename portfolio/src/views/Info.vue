@@ -2,7 +2,7 @@
     <div class="container-info">
         <div class="personal-info">
             <div class="info-img">
-                <img src="" alt="">
+                <img src="@/assets/profile.jpg" alt="Foto de perfil">
             </div>
             <div class="info-name">
                 Ariane Sousa

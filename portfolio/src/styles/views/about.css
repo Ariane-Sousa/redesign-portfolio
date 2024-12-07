@@ -29,7 +29,7 @@ li {
     height: 6px;
     background-color: var(--color-text-primary);
     border-radius: 5px;
-    margin-top: 1.875rem;
+    margin-top: 1.2rem;
     margin-bottom: 1.563rem;
 }
 
@@ -37,11 +37,11 @@ li {
     max-width: 52.438rem;
     color: var(--color-text-info-contacts);
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: medium;
 }
 
-.container-experience {
-    margin-top: 3rem;
+.about-content p {
+    margin-bottom: 1.25rem;
 }
 
 .icon-box {
@@ -73,21 +73,24 @@ li {
     margin-left: 45px;
 }
 
-.timeline-item { position: relative; }
+.timeline-item { 
+    position: relative; 
+}
 
-.timeline-item:not(:last-child) { margin-bottom: 20px; }
+.timeline-item:not(:last-child) {
+    margin-bottom: 20px;
+}
 
 .timeline-item-title {
     font-size: 1rem;
     font-weight: bold;
     color: var(--color-text-title-about);
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .timeline-list span {
     color: var(--color-text-primary);
     font-weight: bold;
-    line-height: 1.6;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -114,8 +117,9 @@ li {
 
 .timeline-text {
     color: var(--color-text-experience);
-    font-weight: bold;
-    line-height: 1.6;
+    font-weight: medium;
+    max-width: 49rem;
+    margin-top: 8px;
 }
 
   

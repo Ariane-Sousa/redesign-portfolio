@@ -22,6 +22,12 @@
     width: 9.313rem;
     height: 9.188rem;
     border-radius: 20px;
+    overflow: hidden;
+}
+.info-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .info-name {
