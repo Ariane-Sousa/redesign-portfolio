@@ -1,0 +1,68 @@
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-text-title-about);
+  font-size: 0.938rem;
+  margin-right: 0.938rem;
+  font-weight: 500;
+}
+
+.tabs .active {
+  color: var(--color-text-primary);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 2.063rem;
+}
+
+.project-card {
+  text-align: left;
+  margin-bottom: 1.688rem;
+  margin-right: 3.468rem;
+}
+
+.project-image {
+  width: 14.563rem;
+  height: 10.988rem;
+  border-radius: 10px;
+  background-color: var(--color-text-title);
+  margin-bottom: 0.775rem;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 0.813rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-title-projects);
+  font-weight: bold;
+  max-width: 14.563rem;
+}
+
+.project-date {
+  font-size: 0.813rem;
+  color: var(--color-subtitle-projects);
+  font-weight: bold;
+  max-width: 14.563rem;
+}
+
+.portfolio-description {
+  font-size: 1rem;
+  color: var(--color-text-experience);
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}

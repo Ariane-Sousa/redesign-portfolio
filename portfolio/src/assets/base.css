@@ -18,6 +18,8 @@
   --color-text-primary: #CB13FF;
   --color-text-navbar: #C3C3C3;
   --color-text-experience: #C1C1C1;
+  --color-title-projects: #DBDBDB;
+  --color-subtitle-projects: #8C8C8D;
 
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
