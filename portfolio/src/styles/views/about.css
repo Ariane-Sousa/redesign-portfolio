@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { 
+    text-decoration: none; 
+}
+
+li { 
+    list-style: none; 
+}
+
+.section-about {
+    margin-left: 2.813rem;
+    margin-top: 2.5rem;
+}
+
+.about-title {
+    color: var(--color-text-title-about);
+    font-weight: bold;
+    font-size: 2.125rem;
+    padding: 0px;
+}
+
+.line-title {
+    width: 2.344rem;
+    height: 6px;
+    background-color: var(--color-text-primary);
+    border-radius: 5px;
+    margin-top: 1.875rem;
+    margin-bottom: 1.563rem;
+}
+
+.about-content {
+    max-width: 52.438rem;
+    color: var(--color-text-info-contacts);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container-experience {
+    margin-top: 3rem;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.563rem;
+    background-color: var(--color-background-icon);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.icon-box i {
+    font-size: 1rem;
+    color: var(--color-text-primary);
+}
+
+.timeline { margin-bottom: 30px; }
+
+.timeline .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.timeline-list {
+    margin-left: 45px;
+}
+
+.timeline-item { position: relative; }
+
+.timeline-item:not(:last-child) { margin-bottom: 20px; }
+
+.timeline-item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text-title-about);
+    margin-bottom: 7px;
+}
+
+.timeline-list span {
+    color: var(--color-text-primary);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: var(--jet);
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -28px;
+    height: 6px;
+    width: 6px;
+    background: var(--color-text-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timeline-text {
+    color: var(--color-text-experience);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+  

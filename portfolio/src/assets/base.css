@@ -14,8 +14,17 @@
   --color-text-paragraph: #D6D6D6;
   --color-text-title-contacts: #959595;
   --color-text-info-contacts: #C0C0C0;
-  --color-text-primary: #BA14E9;
+  --color-text-title-about: #FFFFFF;
+  --color-text-primary: #CB13FF;
   --color-text-navbar: #C3C3C3;
+  --color-text-experience: #C1C1C1;
+
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --jet: hsl(0, 0%, 22%);
 }
 
 body {

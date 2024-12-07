@@ -3,8 +3,8 @@
     <Info></Info>
     <div class="container-router">
       <nav class="navbar">
-        <RouterLink to="/" class="nav-link">Home</RouterLink>
-        <RouterLink to="/about" class="nav-link">About</RouterLink>
+        <RouterLink to="/" class="nav-link">About</RouterLink>
+        <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
       </nav>
       <div class="content">
         <RouterView />
