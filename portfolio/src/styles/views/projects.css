@@ -24,18 +24,21 @@
 }
 
 .project-card {
+  position: relative;
+  gap: 0.5rem;
   text-align: left;
   margin-bottom: 1.688rem;
   margin-right: 3.468rem;
 }
 
 .project-image {
+  position: relative;
+  overflow: hidden;
   width: 14.563rem;
   height: 10.988rem;
   border-radius: 10px;
   background-color: var(--color-text-title);
   margin-bottom: 0.775rem;
-  overflow: hidden;
 }
 
 .project-image img {
@@ -50,6 +53,7 @@
   color: var(--color-title-projects);
   font-weight: bold;
   max-width: 14.563rem;
+  text-align: left !important;
 }
 
 .project-date {
@@ -57,6 +61,7 @@
   color: var(--color-subtitle-projects);
   font-weight: bold;
   max-width: 14.563rem;
+  text-align: left !important;
 }
 
 .portfolio-description {
@@ -64,5 +69,57 @@
   color: var(--color-text-experience);
   text-align: left;
   padding: 10px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-eye {
+  font-size: 30px;
+  color: var(--color-text-title);
+  cursor: pointer;
+}
+
+.project-title,
+.project-date {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  color: var(--color-text-title);
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+
+.pagination button:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-title);
+}
+
+.pagination button.active {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-title);
   font-weight: bold;
 }

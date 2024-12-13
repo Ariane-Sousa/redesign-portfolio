@@ -6,66 +6,86 @@
       </div>
       <div class="line-title"></div>
       <div class="tabs">
-        <button @click="filterProjects('all')" :class="{'active': filter === 'all'}">Todos</button>
-        <button @click="filterProjects('portfolioFatec')" :class="{'active': filter === 'portfolioFatec'}">Portfolio Fatec</button>
+        <button @click="filterProjects('all')" :class="{ active: filter === 'all' }">Todos</button>
+        <button @click="filterProjects('portfolioFatec')" :class="{ active: filter === 'portfolioFatec' }">Portfolio Fatec</button>
       </div>
       <div class="projects-container">
-        <div v-for="project in filteredProjects" :key="project.id" class="project-card">
-          <div class="project-image">
-            <img :src="project.image" :alt="project.title"/>
+        <div v-for="project in paginatedProjects" :key="project.id" class="project-card">
+          <div
+            class="project-image"
+            @mouseenter="hover = project.id"
+            @mouseleave="hover = null"
+          >
+            <img :src="project.image" :alt="project.title" />
+            <div v-if="hover === project.id" class="overlay">
+              <i class="fas fa-eye project-eye" @click="viewProject(project)"></i>
+            </div>
           </div>
           <div class="project-title">{{ project.title }}</div>
-          <div class="project-date">{{ project.date }}</div>
+          <div class="project-date">{{ project.description }}</div>
         </div>
       </div>
-      <div v-if="filter === 'portfolioFatec'" class="portfolio-description">
-        Este portfólio reúne os projetos desenvolvidos ao longo do curso, com foco na abordagem de 
-        Aprendizado por Projetos Integradores (API). Ele reflete uma parte essencial da minha trajetória acadêmica na 
-        Faculdade de Tecnologia de São José dos Campos, onde estou em busca do título de Tecnóloga em Banco de Dados.
+      <div class="pagination">
+        <button @click="goToPage(page)" :class="{ active: currentPage === page }" v-for="page in totalPages" :key="page">
+          {{ page }}
+        </button>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed } from "vue";
 import "@/styles/views/projects.css";
-import betaImage from "@/assets/projects/beta.jpg"
-import pro4TechImage from "@/assets/projects/pro4tech.jpg"
-import domRockImage from "@/assets/projects/domrock.jpg"
-import jaiaImage from "@/assets/projects/jaia.webp"
-import tecsusImage from "@/assets/projects/tecsus.jpg"
-import spcGrafenoImage from "@/assets/projects/grafeno.jpg"
+import betaImage from "@/assets/projects/beta.jpg";
+import pro4TechImage from "@/assets/projects/pro4tech.jpg";
+import domRockImage from "@/assets/projects/domrock.jpg";
+import jaiaImage from "@/assets/projects/jaia.webp";
+import tecsusImage from "@/assets/projects/tecsus.jpg";
+import spcGrafenoImage from "@/assets/projects/grafeno.jpg";
+import grafos from "@/assets/projects/grafos.webp";
 
-export default {
-  data() {
-    return {
-      filter: 'all',
-      projects: [
-        { id: 1, title: 'Assistente Virtual', date: '1º Semestre/2022 - Beta', image: betaImage, category: 'portfolioFatec' }, 
-        { id: 2, title: 'Sistema de Gerenciamento de Vagas', date: '2º Semestre/2022 - Pro4Tech', image: pro4TechImage, category: 'portfolioFatec' },
-        { id: 3, title: 'Sistema de Predição de Vendas', date: '3º Semestre/2023 - Dom Rock', image: domRockImage, category: 'portfolioFatec' },
-        { id: 4, title: 'Sistema de Inspeções Prediais', date: '4º Semestre/2023 - Jaia', image: jaiaImage, category: 'portfolioFatec' },
-        { id: 5, title: 'Sistema de Processamento de Contas', date: '5º Semestre/2024 - Tecsus', image: tecsusImage, category: 'portfolioFatec' },
-        { id: 6, title: 'Sistema de Previsão e Qualificação de Ativos Financeiros com Machine Learning', date: '6º Semestre/2023 - SPC Grafeno', image: spcGrafenoImage, category: 'portfolioFatec' },
-      ]
-    };
-  },
-  computed: {
-    filteredProjects() {
-      if (this.filter === 'all') {
-        return this.projects;
-      }
-      return this.projects.filter(project => project.category === this.filter);
-    }
-  },
-  methods: {
-    filterProjects(category) {
-      this.filter = category;
-    }
-  }
+const filter = ref("all");
+const hover = ref(null);
+const currentPage = ref(1);
+const itemsPerPage = 6;
+
+const projects = [
+  { id: 1, title: "Assistente Virtual", description: "FATEC 1º Semestre - Beta", actualDate: "2022-01-01", image: betaImage, category: "portfolioFatec" },
+  { id: 2, title: "Sistema de Gerenciamento de Vagas", description: "FATEC 2º Semestre - Pro4Tech", actualDate: "2022-06-01", image: pro4TechImage, category: "portfolioFatec" },
+  { id: 3, title: "Sistema de Predição de Vendas", description: "FATEC 3º Semestre - Dom Rock", actualDate: "2023-01-01", image: domRockImage, category: "portfolioFatec" },
+  { id: 4, title: "Sistema de Inspeções Prediais", description: "FATEC 4º Semestre - Jaia", actualDate: "2023-06-01", image: jaiaImage, category: "portfolioFatec" },
+  { id: 5, title: "Sistema de Processamento de Contas", description: "FATEC 5º Semestre - Tecsus", actualDate: "2024-01-01", image: tecsusImage, category: "portfolioFatec" },
+  { id: 6, title: "Sistema de Previsão e Qualificação de Ativos Financeiros com Machine Learning", description: "FATEC 6º Semestre - SPC Grafeno", actualDate: "2024-06-01", image: spcGrafenoImage, category: "portfolioFatec" },
+  { id: 7, title: "API de Grafos Georreferenciados com PostGIS: Otimização e Roteamento", description: "Georreferenciamento otimizado", actualDate: "2024-09-01", image: grafos, category: "all" },
+];
+
+const filteredProjects = computed(() => {
+  let filtered = filter.value === "all" ? projects : projects.filter(project => project.category === filter.value);
+  filtered = filtered.sort((a, b) => new Date(b.actualDate) - new Date(a.actualDate));
+  return filtered;
+});
+
+const totalPages = computed(() => {
+  return Math.ceil(filteredProjects.value.length / itemsPerPage);
+});
+
+const paginatedProjects = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return filteredProjects.value.slice(start, end);
+});
+
+const filterProjects = (category) => {
+  filter.value = category;
+  currentPage.value = 1;
+};
+
+const goToPage = (page) => {
+  currentPage.value = page;
+};
+
+const viewProject = (project) => {
+  console.log("Viewing project: ", project);
 };
 </script>
-
-<style scoped>
-
-</style>
