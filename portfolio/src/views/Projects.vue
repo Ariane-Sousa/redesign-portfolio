@@ -49,15 +49,70 @@ const filter = ref("all");
 const hover = ref(null);
 const currentPage = ref(1);
 const itemsPerPage = 6;
-
 const projects = [
-  { id: 1, title: "Assistente Virtual", description: "FATEC 1º Semestre - Beta", actualDate: "2022-01-01", image: betaImage, category: "portfolioFatec" },
-  { id: 2, title: "Sistema de Gerenciamento de Vagas", description: "FATEC 2º Semestre - Pro4Tech", actualDate: "2022-06-01", image: pro4TechImage, category: "portfolioFatec" },
-  { id: 3, title: "Sistema de Predição de Vendas", description: "FATEC 3º Semestre - Dom Rock", actualDate: "2023-01-01", image: domRockImage, category: "portfolioFatec" },
-  { id: 4, title: "Sistema de Inspeções Prediais", description: "FATEC 4º Semestre - Jaia", actualDate: "2023-06-01", image: jaiaImage, category: "portfolioFatec" },
-  { id: 5, title: "Sistema de Processamento de Contas", description: "FATEC 5º Semestre - Tecsus", actualDate: "2024-01-01", image: tecsusImage, category: "portfolioFatec" },
-  { id: 6, title: "Sistema de Previsão e Qualificação de Ativos Financeiros com Machine Learning", description: "FATEC 6º Semestre - SPC Grafeno", actualDate: "2024-06-01", image: spcGrafenoImage, category: "portfolioFatec" },
-  { id: 7, title: "API de Grafos Georreferenciados com PostGIS: Otimização e Roteamento", description: "Georreferenciamento otimizado", actualDate: "2024-09-01", image: grafos, category: "all" },
+  { 
+    id: 1, 
+    title: "Assistente Virtual",
+    description: "FATEC 1º Semestre - Beta",
+    actualDate: "2022-01-01",
+    image: betaImage,
+    category: "portfolioFatec",
+    url: "https://github.com/Ariane-Sousa/beta" 
+  },
+  { 
+    id: 2, 
+    title: "Sistema de Gerenciamento de Vagas", 
+    description: "FATEC 2º Semestre - Pro4Tech", 
+    actualDate: "2022-06-01", 
+    image: pro4TechImage, 
+    category: "portfolioFatec", 
+    url: "https://github.com/Ariane-Sousa/pro4tech" 
+  },
+  { 
+    id: 3, 
+    title: "Sistema de Predição de Vendas", 
+    description: "FATEC 3º Semestre - Dom Rock", 
+    actualDate: "2023-01-01", 
+    image: domRockImage, 
+    category: "portfolioFatec", 
+    url: "https://github.com/Ariane-Sousa/dom-rock" 
+  },
+  { 
+    id: 4, 
+    title: "Sistema de Inspeções Prediais", 
+    description: "FATEC 4º Semestre - Jaia", 
+    actualDate: "2023-06-01", 
+    image: jaiaImage, 
+    category: "portfolioFatec", 
+    url: "https://github.com/Ariane-Sousa/jaia-predial" 
+  },
+  { 
+    id: 5, 
+    title: "Sistema de Processamento de Contas", 
+    description: "FATEC 5º Semestre - Tecsus", 
+    actualDate: "2024-01-01", 
+    image: tecsusImage, 
+    category: "portfolioFatec", 
+    url: "https://github.com/Ariane-Sousa/Tecsus" 
+  },
+  { 
+    id: 6, 
+    title: "Sistema de Previsão e Qualificação de Ativos Financeiros com Machine Learning", 
+    description: "FATEC 6º Semestre - SPC Grafeno", 
+    actualDate: "2024-06-01", 
+    image: spcGrafenoImage, 
+    category: "portfolioFatec", 
+    url: "https://github.com/Ariane-Sousa/SPC-Grafeno" 
+  },
+  { 
+    id: 7, 
+    title: "API de Grafos Georreferenciados com PostGIS: Otimização e Roteamento", 
+    description: "Georreferenciamento otimizado", 
+    actualDate: "2024-09-01", 
+    image: grafos, 
+    category: "all", 
+    url: "https://github.com/Ariane-Sousa/grafos" 
+  },
 ];
 
 const filteredProjects = computed(() => {
@@ -86,6 +141,10 @@ const goToPage = (page) => {
 };
 
 const viewProject = (project) => {
-  console.log("Viewing project: ", project);
+  if (project.url) {
+    window.open(project.url, "_blank");
+  } else {
+    console.log("URL não definida para o projeto: ", project);
+  }
 };
 </script>
