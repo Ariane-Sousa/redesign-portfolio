@@ -35,7 +35,7 @@
           </li>
           <li class="timeline-item">
             <h4 class="timeline-item-title">Desenvolvedora de Software - Altave</h4>
-            <span>Outubro/2023 - Present</span>
+            <span>Outubro/2023 - Atualmente</span>
             <p class="timeline-text">
               Iniciei minha trajetória como estagiária em Desenvolvimento Web e, atualmente, atuo como Desenvolvedora de Software, contribuindo para soluções completas em front-end, back-end e cloud.
             </p>

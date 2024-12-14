@@ -18,7 +18,11 @@
                     </div>
                     <div class="info">
                         <div class="title">EMAIL</div>
-                        <div class="info">cristine_ariane@outlook.com</div>
+                        <div class="info">
+                            <a href="mailto:cristine_ariane@outlook.com">
+                                cristine_ariane@outlook.com
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="group-contact">
@@ -27,7 +31,11 @@
                     </div>
                     <div class="info">
                         <div class="title">PHONE</div>
-                        <div class="info">+55 (12) 99218-1849</div>
+                        <div class="info">
+                            <a href="https://wa.me/5512992181849">
+                                +55 (12) 99218-1849
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="group-contact">
@@ -36,7 +44,11 @@
                     </div>
                     <div class="info">
                         <div class="title">LINKEDIN</div>
-                        <div class="info">Ariane Sousa</div>
+                        <div class="info">
+                            <a href="https://www.linkedin.com/in/ariane-sousa77" target="_blank">
+                                Ariane Sousa
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="group-contact">
@@ -45,17 +57,23 @@
                     </div>
                     <div class="info">
                         <div class="title">GITHUB</div>
-                        <div class="info">Ariane-Sousa</div>
+                        <div class="info">
+                            <a href="https://github.com/Ariane-Sousa" target="_blank">
+                                Ariane-Sousa
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="button-donwloadcv">
-                <button>Donwload CV</button>
+                <a href="/ariane.curriculo.pdf" download>
+                    <button>Download CV</button>
+                </a>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import "@/styles/views/info.css"
+import "@/styles/views/info.css";
 </script>
