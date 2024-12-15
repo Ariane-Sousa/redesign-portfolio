@@ -1,143 +1,164 @@
 .container-info {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 17.375rem;
-    height: 46.75rem;
-    border-radius: 20px;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-soft);
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 17.375rem;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background-soft);
+  overflow: hidden;
+  padding: 1rem;
 }
 
 .personal-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3.438rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.438rem;
 }
 
 .info-img {
-    width: 9.313rem;
-    height: 9.188rem;
-    border-radius: 20px;
-    overflow: hidden;
+  width: 9.313rem;
+  height: 9.188rem;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .info-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .info-name {
-    color: var(--color-text-title);
-    font-weight: bold;
-    font-size: 1.625rem;
-    margin-top: 1.438rem;
+  color: var(--color-text-title);
+  font-weight: bold;
+  font-size: 1.625rem;
+  margin-top: 1.438rem;
 }
 
 .info-job {
-    color: var(--color-text-paragraph);
-    font-size: 0.813rem;
-    font-weight: medium;
-    width: 9.688rem;
-    height: 1.75rem;
-    background-color: var(--color-background-button);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--color-text-paragraph);
+  font-size: 0.813rem;
+  font-weight: medium;
+  width: 9.688rem;
+  height: 1.75rem;
+  background-color: var(--color-background-button);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .line {
-    width: 14.875rem;
-    height: 1px;
-    background-color: var(--color-border);
-    margin-top: 2.156rem;
-    margin-bottom: 2.281rem;
+  width: 14.875rem;
+  height: 1px;
+  background-color: var(--color-border);
+  margin-top: 2.156rem;
+  margin-bottom: 2.281rem;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
 }
 
 .contacts {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .group-contact {
-    display: flex;
-    flex-direction: row;
-    gap: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
 }
 
 .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.563rem;
-    background-color: var(--color-background-icon);
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.563rem;
+  background-color: var(--color-background-icon);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.icon i{
-    font-size: 1rem;
-    color: var(--color-text-primary);
+.icon i {
+  font-size: 1rem;
+  color: var(--color-text-primary);
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
 }
 
 .info .title {
-    color: var(--color-text-title-contacts);
-    font-size: 0.813rem;
-    font-weight: medium;
+  color: var(--color-text-title-contacts);
+  font-size: 0.813rem;
+  font-weight: medium;
 }
 
 .info .info {
-    color: var(--color-text-info-contacts);
-    font-size: 0.813rem;
-    font-weight: medium;
+  color: var(--color-text-info-contacts);
+  font-size: 0.813rem;
+  font-weight: medium;
 }
 
 .button-donwloadcv button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--color-text-paragraph);
-    font-size: 0.813rem;
-    font-weight: medium;
-    width: 9.688rem;
-    height: 1.75rem;
-    background-color: var(--color-background-button);
-    border-radius: 10px;
-    margin-top: 3.188rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-paragraph);
+  font-size: 0.813rem;
+  font-weight: medium;
+  width: 9.688rem;
+  height: 1.75rem;
+  background-color: var(--color-background-button);
+  border-radius: 10px;
+  margin-top: 3.188rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
 }
 
 .button-donwloadcv button:hover {
-    background-color: var(--color-background-icon);
+  background-color: var(--color-background-icon);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    background: none;
-    border: none;
-    padding: 0; 
-    margin: 0;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 a:hover {
-    color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .container-info {
+    width: 100%;
+  }
+
+  .personal-info {
+    margin-top: 1.5rem;
+  }
+
+  .button-donwloadcv button {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+  }
 }
