@@ -20,7 +20,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
   margin-left: 2.063rem;
 }
 
@@ -144,5 +143,6 @@
 @media (max-width: 768px) {
   .projects-container {
     margin-left: 3rem;
+    align-items: center;
   }
 }
