@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="button-donwloadcv">
-                <a href="/redesign-portfolio/curriculo-ariane-sousa.pdf" download>
+                <a href="/redesign-portfolio/Ariane_Sousa_Curriculo_2024.pdf" download>
                     <button>Download CV</button>
                 </a>
             </div>
