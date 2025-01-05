@@ -8,6 +8,7 @@
       <div class="tabs">
         <button @click="filterProjects('all')" :class="{ active: filter === 'all' }">Todos</button>
         <button @click="filterProjects('portfolioFatec')" :class="{ active: filter === 'portfolioFatec' }">Portfolio Fatec</button>
+        <button @click="filterProjects('design')" :class="{ active: filter === 'design' }">Web design</button>
       </div>
       <div class="projects-container">
         <div v-for="project in paginatedProjects" :key="project.id" class="project-card">
@@ -44,6 +45,7 @@ import jaiaImage from "@/assets/projects/jaia.webp";
 import tecsusImage from "@/assets/projects/tecsus.jpg";
 import spcGrafenoImage from "@/assets/projects/grafeno.jpg";
 import grafos from "@/assets/projects/grafos.webp";
+import ecobrew from "@/assets/projects/ecobrew.png"
 
 const filter = ref("all");
 const hover = ref(null);
@@ -112,6 +114,15 @@ const projects = [
     image: grafos, 
     category: "all", 
     url: "https://github.com/Ariane-Sousa/grafos" 
+  },
+  { 
+    id: 9, 
+    title: "Web Design - EcoBrew", 
+    description: "Protótipo de um site para uma cafeteria fictícia", 
+    actualDate: "2025-01-02", 
+    image: ecobrew, 
+    category: "design", 
+    url: "https://github.com/Ariane-Sousa/ecobrew-design" 
   },
 ];
 
