@@ -45,7 +45,9 @@ import jaiaImage from "@/assets/projects/jaia.webp";
 import tecsusImage from "@/assets/projects/tecsus.jpg";
 import spcGrafenoImage from "@/assets/projects/grafeno.jpg";
 import grafos from "@/assets/projects/grafos.webp";
-import ecobrew from "@/assets/projects/ecobrew.png"
+import ecobrew from "@/assets/projects/ecobrew.png";
+import talenthubCandidato from "@/assets/projects/talenthub-candidato.png";
+import talenthubRecrutador from "@/assets/projects/talenthub-recrutador.png";
 
 const filter = ref("all");
 const hover = ref(null);
@@ -117,12 +119,30 @@ const projects = [
   },
   { 
     id: 9, 
-    title: "Web Design - EcoBrew", 
+    title: "EcoBrew", 
     description: "Protótipo de um site para uma cafeteria fictícia", 
     actualDate: "2025-01-02", 
     image: ecobrew, 
     category: "design", 
-    url: "https://github.com/Ariane-Sousa/ecobrew-design" 
+    url: "https://www.figma.com/proto/ITUjlrJCqd1YKndJhc2cO2/EcoBrew?page-id=5%3A573&node-id=5-574&p=f&viewport=-292%2C2343%2C0.28&t=yaMryNJyqTDtUyma-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A574" 
+  },
+  { 
+    id: 10, 
+    title: "TalentHub", 
+    description: "Protótipo de um site para gerenciamento e aplicação de vagas - Visão candidato", 
+    actualDate: "2025-01-10", 
+    image: talenthubCandidato, 
+    category: "design", 
+    url: "https://www.figma.com/proto/6PGgW7K4eLmpj7oh6CWc9g/TalentHub?page-id=1%3A2&node-id=3-34&p=f&viewport=-922%2C-829%2C0.48&t=sTZwZOxqQrbE3o6g-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A34" 
+  },
+  { 
+    id: 11, 
+    title: "TalentHub", 
+    description: "Protótipo de um site para gerenciamento e aplicação de vagas - Visão recrutador", 
+    actualDate: "2025-01-10", 
+    image: talenthubRecrutador, 
+    category: "design", 
+    url: "https://www.figma.com/proto/6PGgW7K4eLmpj7oh6CWc9g/TalentHub?page-id=41%3A1145&node-id=41-1146&p=f&viewport=781%2C762%2C0.32&t=wxCuf7mam8k8RKPP-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=41%3A1146" 
   },
 ];
 
