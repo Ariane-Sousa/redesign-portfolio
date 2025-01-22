@@ -129,20 +129,11 @@ const projects = [
   { 
     id: 10, 
     title: "TalentHub", 
-    description: "Protótipo de um site para gerenciamento e aplicação de vagas - Visão candidato", 
+    description: "Protótipo de um site para gerenciamento e aplicação de vagas", 
     actualDate: "2025-01-10", 
     image: talenthubCandidato, 
     category: "design", 
     url: "https://www.figma.com/proto/6PGgW7K4eLmpj7oh6CWc9g/TalentHub?page-id=1%3A2&node-id=3-34&p=f&viewport=-922%2C-829%2C0.48&t=sTZwZOxqQrbE3o6g-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A34" 
-  },
-  { 
-    id: 11, 
-    title: "TalentHub", 
-    description: "Protótipo de um site para gerenciamento e aplicação de vagas - Visão recrutador", 
-    actualDate: "2025-01-10", 
-    image: talenthubRecrutador, 
-    category: "design", 
-    url: "https://www.figma.com/proto/6PGgW7K4eLmpj7oh6CWc9g/TalentHub?page-id=41%3A1145&node-id=41-1146&p=f&viewport=781%2C762%2C0.32&t=wxCuf7mam8k8RKPP-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=41%3A1146" 
   },
 ];
 
