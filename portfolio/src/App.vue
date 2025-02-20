@@ -1,20 +1,15 @@
 <template>
-  <header>
-    <Info></Info>
-    <div class="container-router">
-      <nav class="navbar">
-        <RouterLink to="/" class="nav-link">Sobre</RouterLink>
-        <RouterLink to="/projects" class="nav-link">Projetos</RouterLink>
-      </nav>
+  <div class="layout">
+    <SideBar></SideBar>
+    <main class="container-router">
       <div class="content">
         <RouterView />
       </div>
-    </div>
-  </header>
-
+    </main>
+  </div>
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import Info from "@/views/Info.vue";
+import { RouterView } from "vue-router";
+import SideBar from "@/views/SideBar.vue";
 </script>

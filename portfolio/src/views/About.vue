@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div class="container-experience">
+    <!-- <div class="container-experience">
       <div class="about-title">
         Experiências
       </div>
@@ -42,7 +42,7 @@
           </li>
         </ol>
       </section>
-    </div>
+    </div> -->
   </div>
 </template>
 
