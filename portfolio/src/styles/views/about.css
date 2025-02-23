@@ -1,130 +1,165 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a { 
-    text-decoration: none; 
-}
-
-li { 
-    list-style: none; 
-}
-
-.section{
-    margin-left: 2.813rem;
-    margin-top: 2.5rem;
-}
-
-.about-title {
-    color: var(--color-text-title-about);
-    font-weight: bold;
-    font-size: 2.125rem;
-    padding: 0px;
-}
-
-.line-title {
-    width: 2.344rem;
-    height: 6px;
-    background-color: var(--color-text-primary);
-    border-radius: 5px;
-    margin-top: 1.2rem;
-    margin-bottom: 1.563rem;
-}
-
-.about-content {
-    max-width: 52.438rem;
-    color: var(--color-text-info-contacts);
-    font-size: 1rem;
-    font-weight: medium;
-}
-
-.about-content p {
-    margin-bottom: 1.25rem;
-}
-
-.icon-box {
+.section-home {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 2.75rem;
-    height: 2.563rem;
-    background-color: var(--color-background-icon);
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.icon-box i {
-    font-size: 1rem;
-    color: var(--color-text-primary);
-}
-
-.timeline { margin-bottom: 30px; }
-
-.timeline .title-wrapper {
-    display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
 
-.timeline-list {
-    margin-left: 45px;
-}
-
-.timeline-item { 
-    position: relative; 
-}
-
-.timeline-item:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.timeline-item-title {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-text-title-about);
-    margin-bottom: 8px;
-}
-
-.timeline-list span {
-    color: var(--color-text-primary);
-    font-weight: bold;
-}
-
-.timeline-item:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: 1px;
-    height: calc(100% + 50px);
-    background: var(--jet);
-}
-
-.timeline-item::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -28px;
-    height: 6px;
-    width: 6px;
-    background: var(--color-text-primary);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--jet);
-}
-
-.timeline-text {
-    color: var(--color-text-experience);
-    font-weight: medium;
-    max-width: 49rem;
-    margin-top: 8px;
-}
-
-@media (max-width: 768px) {
-    .section {
-      margin-left: 0;
+    .container-about {
+        display: flex;
+        flex-direction: column;
+        gap: 2.75rem;
+        width: 53.125rem;
+        max-height: 45rem;
+        margin-top: 2.563rem;
+        overflow-y: scroll;
+        scrollbar-width: none;
     }
-  }
-  
+
+    .container-about::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 1.125rem;
+
+        .about-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            .about-title {
+                color: var(--color-light);
+                font-weight: var(--font-weight-semibold);
+                font-size: 1.5rem;
+            }
+            
+            .download-cv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--color-light-1);
+                color: var(--color-grey);
+                font-size: 1rem;
+                padding: 0.625rem 0.875rem;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+                gap: 0.625rem;
+            }
+    
+            .download-cv img {
+                width: 1.2rem;
+                height: auto;
+            }
+    
+            .download-cv a {
+                text-decoration: none;
+                color: var(--color-grey);
+                font-size: 1rem;
+                font-weight: var(--font-weight-regular);
+                font-family: var(--font-family);
+            }
+    
+            .download-cv:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .about-content {
+            color: var(--color-light--1);
+            font-size: 1rem;
+            font-weight: var(--font-weight-regular);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .about-skills {
+            display: flex;
+            flex-direction: row;
+            gap: 0.875rem;
+        }
+
+        .about-skills span {
+            border-radius: 8px;
+            padding: 0.625rem 0.875rem;
+            background-color: var(--color-primary--1);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            color: var(--color-light--1);
+        }
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.875rem;
+
+        .projects-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .title {
+                color: var(--color-light);
+                font-weight: var(--font-weight-semibold);
+                font-size: 1.5rem;
+            }
+
+            .group {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .subtitle {
+                    color: var(--color-light--1);
+                    font-size: 1rem;
+                    font-weight: var(--font-weight-regular);
+                }
+
+                .all {
+                    color: var(--color-light--1);
+                    font-size: 1rem;
+                    font-weight: var(--font-weight-regular);
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    transition: opacity 0.3s ease;
+                }
+
+                .all:hover {
+                    opacity: 0.7;
+                }
+
+                .all i {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+
+        .projects-details {
+            width: 100%;
+            height: auto;
+        }
+        
+        .slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}

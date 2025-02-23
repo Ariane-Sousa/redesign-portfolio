@@ -13,11 +13,13 @@
             <div class="line"></div>
 
             <div class="routers">
-                <router-link to="/" exact-active-class="active">Home</router-link>
-                <router-link to="/experiencia" exact-active-class="active">Experiência</router-link>
-                <router-link to="/projects" exact-active-class="active">Projeto</router-link>
-                <router-link to="/educacao" exact-active-class="active">Educação</router-link>
-                <router-link to="/contatos" exact-active-class="active">Contato</router-link>
+                <router-link :to="{ name: 'home' }" exact-active-class="active">Home</router-link>
+                <router-link :to="{ name: 'experiences' }" exact-active-class="active">
+                    Experiências
+                </router-link>
+                <router-link :to="{ name: 'projects' }" exact-active-class="active">Projeto</router-link>
+                <router-link :to="{ name: 'education' }" exact-active-class="active">Educação</router-link>
+                <router-link :to="{ name: 'contacts' }" exact-active-class="active">Contato</router-link>
             </div>
 
             <div class="utils">
