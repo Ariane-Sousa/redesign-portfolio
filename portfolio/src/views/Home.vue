@@ -8,7 +8,7 @@
           </h1>
           <button class="download-cv">
             <img src="@/assets/icon/download.svg" alt="Download" />
-            <a href="@/assets/cv.pdf" download="Ariane-Sousa-CV.pdf">
+            <a href="/redesign-portfolio/Ariane_Sousa_Curriculo_2024.pdf" download>
               Download CV
             </a>
           </button>
@@ -40,7 +40,16 @@
           </div>
         </div>
 
-        <swiper class="projects-details" :modules="modules" :pagination="{ type: 'progressbar' }">
+        <swiper
+          class="projects-details"
+          :modules="modules"
+          :pagination="{ clickable: true }"
+          :space-between="30"
+          :slides-per-view="auto"
+          :effect="'slide'"
+          :loop="true"
+          :slide-to-clicked-slide="true"
+        >
           <swiper-slide v-for="(project, index) in projects" :key="index" class="slide">
             <figure class="image-placeholder">
               <img :src="project.image" :alt="project.title" />
@@ -61,6 +70,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const { Pagination } = SwiperModules;
+
 const skills = ref([
   "Django",
   "FastAPI",
@@ -78,3 +88,32 @@ const projects = ref([
 
 const modules = [Pagination];
 </script>
+
+<style>
+.swiper-pagination-bullet {
+  background-color: var(--color-light-1);
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: var(--color-grey);
+}
+
+.swiper .swiper-slide {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper .swiper-slide:hover {
+  transform: scale(1.02);
+}
+</style>
