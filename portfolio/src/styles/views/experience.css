@@ -25,6 +25,7 @@ li {
     overflow-y: scroll;
     scrollbar-width: none;
 }
+
 .section::after {
     content: "↓";
     position: absolute;
