@@ -1,14 +1,9 @@
 <template>
-  <div class="section">
-    <div class="container-about">
-      <div class="about-title">
-        Projetos
-      </div>
-      <div class="line-title"></div>
-      <div class="tabs">
-        <button @click="filterProjects('all')" :class="{ active: filter === 'all' }">Todos</button>
-        <button @click="filterProjects('portfolioFatec')" :class="{ active: filter === 'portfolioFatec' }">Portfolio Fatec</button>
-        <button @click="filterProjects('design')" :class="{ active: filter === 'design' }">Web design</button>
+  <div class="section-project">
+    <div class="container-project">
+      <div class="projects-title">
+        <h1>Projetos</h1>
+        <h2>Conheça alguns dos projetos que desenvolvi</h2>
       </div>
       <div class="projects-container">
         <div v-for="project in paginatedProjects" :key="project.id" class="project-card">
@@ -22,8 +17,14 @@
               <i class="fas fa-eye project-eye" @click="viewProject(project)"></i>
             </div>
           </div>
-          <div class="project-title">{{ project.title }}</div>
-          <div class="project-date">{{ project.description }}</div>
+          <div class="project-title">
+            <h1>{{ project.title }}</h1>
+            <h2>{{ project.description }}</h2>
+          </div>
+          <div class="see-more">
+            <span>Ver detalhes</span>
+            <i class="fa-solid fa-arrow-right" />
+          </div>
         </div>
       </div>
       <div class="pagination">
@@ -65,7 +66,7 @@ const projects = [
   },
   { 
     id: 2, 
-    title: "Sistema de Gerenciamento de Vagas", 
+    title: "Gerenciamento de Vagas", 
     description: "FATEC 2º Semestre - Pro4Tech", 
     actualDate: "2022-06-01", 
     image: pro4TechImage, 
@@ -74,7 +75,7 @@ const projects = [
   },
   { 
     id: 3, 
-    title: "Sistema de Predição de Vendas", 
+    title: "Predição de Vendas", 
     description: "FATEC 3º Semestre - Dom Rock", 
     actualDate: "2023-01-01", 
     image: domRockImage, 
@@ -83,7 +84,7 @@ const projects = [
   },
   { 
     id: 4, 
-    title: "Sistema de Inspeções Prediais", 
+    title: "Inspeções Prediais", 
     description: "FATEC 4º Semestre - Jaia", 
     actualDate: "2023-06-01", 
     image: jaiaImage, 
@@ -92,7 +93,7 @@ const projects = [
   },
   { 
     id: 5, 
-    title: "Sistema de Processamento de Contas", 
+    title: "Processamento de Contas", 
     description: "FATEC 5º Semestre - Tecsus", 
     actualDate: "2024-01-01", 
     image: tecsusImage, 
@@ -101,7 +102,7 @@ const projects = [
   },
   { 
     id: 6, 
-    title: "Sistema de Previsão e Qualificação de Ativos Financeiros com Machine Learning", 
+    title: "Ativos Financeiros", 
     description: "FATEC 6º Semestre - SPC Grafeno", 
     actualDate: "2024-06-01", 
     image: spcGrafenoImage, 
@@ -110,7 +111,7 @@ const projects = [
   },
   { 
     id: 7, 
-    title: "API de Grafos Georreferenciados com PostGIS: Otimização e Roteamento", 
+    title: "Grafos Georreferenciados", 
     description: "Georreferenciamento otimizado", 
     actualDate: "2024-09-01", 
     image: grafos, 
@@ -120,7 +121,7 @@ const projects = [
   { 
     id: 9, 
     title: "EcoBrew", 
-    description: "Protótipo de um site para uma cafeteria fictícia", 
+    description: "Protótipo web para uma cafeteria", 
     actualDate: "2025-01-02", 
     image: ecobrew, 
     category: "design", 
@@ -129,7 +130,7 @@ const projects = [
   { 
     id: 10, 
     title: "TalentHub", 
-    description: "Protótipo de um site para gerenciamento e aplicação de vagas", 
+    description: "Protótipo web para gerenciamento e aplicação de vagas", 
     actualDate: "2025-01-10", 
     image: talenthubCandidato, 
     category: "design", 

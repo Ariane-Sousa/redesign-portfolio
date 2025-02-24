@@ -12,7 +12,13 @@ li {
     list-style: none; 
 }
 
-.section{
+.section-experience {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.563rem;
+}
+
+.section-education {
     display: flex;
     justify-content: center;
     margin-top: 2.563rem;
@@ -26,7 +32,7 @@ li {
     scrollbar-width: none;
 }
 
-.section::after {
+.section-experience::after {
     content: "↓";
     position: absolute;
     bottom: 10px;
@@ -48,7 +54,6 @@ li {
         transform: translateX(-50%) translateY(0);
     }
 }
-
 
 .icon-box {
     display: flex;
@@ -140,7 +145,7 @@ li {
     }
 
     .description {
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: var(--font-weight-regular);
         color: var(--color-light--1);
     }
@@ -174,11 +179,3 @@ li {
         font-weight: var(--font-weight-semibold);
     }
 }
-
-.description li::before {
-    content: "• ";
-    color: var(--color-light--1);
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  

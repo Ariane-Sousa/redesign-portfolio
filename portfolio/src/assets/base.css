@@ -3,44 +3,18 @@
 :root {  
   /* Colors */
   --color-primary: #9F30B0;
+  --color-primary-1: #CB13FF;
   --color-primary--1: #38223C;
 
   --color-dark: #121212;
   --color-dark-1: #1E1E1F;
   --color-grey: #383838;
+  --color-grey-1: #8C8C8D;
 
   --color-light: #F6F6F6;
   --color-light--1: #C0C0C0;
   --color-light-1: #E9F5FE;
-
-
-  --color-background: #121212;
-  --color-background-soft: #1E1E1F;
-  --color-background-navbar: #282829;
-  --color-background-button: #2B2B2C;
-  --color-background-icon: #202022;
-
-  --color-border: #383838;
-
-  --color-text-title: #F6F6F6;
-  --color-text-subtitle: var(--vt-c-text-light-1);
-  --color-text-paragraph: #D6D6D6;
-  --color-text-title-contacts: #959595;
-  --color-text-info-contacts: #C0C0C0;
-  --color-text-title-about: #FFFFFF;
-  --color-text-primary: #CB13FF;
-  --color-text-navbar: #C3C3C3;
-  --color-text-experience: #C1C1C1;
-  --color-title-projects: #DBDBDB;
-  --color-subtitle-projects: #8C8C8D;
-
-  --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
-  );
   --jet: hsl(0, 0%, 22%);
-
 
   /* Fonte */
   --font-family: "Open Sans", sans-serif;

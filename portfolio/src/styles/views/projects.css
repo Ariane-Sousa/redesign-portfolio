@@ -1,51 +1,66 @@
-.tabs {
-  margin-bottom: 20px;
+.section-project {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.563rem;
 }
 
-.tabs button {
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  color: var(--color-text-title-about);
-  font-size: 0.938rem;
-  margin-right: 0.938rem;
-  font-weight: 500;
+.container-project {
+  display: flex;
+  flex-direction: column;
+  width: 53.125rem;
+  max-height: 45rem;
 }
 
-.tabs .active {
-  color: var(--color-text-primary);
+.projects-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projects-title h1{
+  color: var(--color-light);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.5rem;
+}
+
+.projects-title h2{
+  color: var(--color-light--1);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
 }
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  margin-left: 2.063rem;
+  justify-content: center;
+  gap: 3.125rem;
+  margin-top: 1.5rem;
 }
 
 .project-card {
-  position: relative;
-  gap: 0.5rem;
-  text-align: left;
-  margin-bottom: 1.688rem;
-  margin-right: 3.468rem;
+  display: flex;
+  flex-direction: column;
+  width: 15.625rem;
+  height: 16.063rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 8px;
 }
 
 .project-image {
   position: relative;
   overflow: hidden;
-  width: 14.563rem;
-  height: 10.988rem;
-  border-radius: 10px;
-  margin-bottom: 0.775rem;
+  width: 100%;
+  height: 9.875rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   transition: transform 0.3s ease;
-  background-color: var(--color-text-title);
+  background-color: var(--color-light);
 }
 
 .project-image:hover img {
@@ -53,28 +68,46 @@
 }
 
 .project-title {
-  font-size: 0.813rem;
-  margin-bottom: 0.3rem;
-  color: var(--color-title-projects);
-  font-weight: bold;
-  max-width: 14.563rem;
-  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0px 0.875rem;
 }
 
-.project-date {
-  font-size: 0.813rem;
-  color: var(--color-subtitle-projects);
-  font-weight: bold;
-  max-width: 14.563rem;
-  text-align: left !important;
+.project-title h1 {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-light);
 }
 
-.portfolio-description {
-  font-size: 1rem;
-  color: var(--color-text-experience);
-  text-align: left;
-  padding: 10px;
-  font-weight: bold;
+.project-title h2 {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-grey-1);
+}
+
+.project-title h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+}
+
+.see-more {
+  font-size: 0.813rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-1);
+  margin: 1rem 0 0.875rem 0.875rem;
+  cursor: pointer;
+}
+
+.see-more span{
+  margin-right: 8px;
+}
+
+.see-more:hover {
+  opacity: 0.7;
 }
 
 .overlay {
@@ -87,29 +120,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 .overlay i {
-  background-color: var(--color-background-button);
+  background-color: var(--color-dark-1);
   padding-top: 13px;
   padding-bottom: 13px;
   padding-right: 15px;
   padding-left: 15px;
   font-size: 15px;
   border-radius: 6px;
-  color: var(--color-text-primary);
+  color: var(--color-primary);
 }
 
 .project-eye {
   font-size: 30px;
-  color: var(--color-text-title);
+  color: var(--color-grey);
   cursor: pointer;
-}
-
-.project-title,
-.project-date {
-  text-align: center;
 }
 
 .pagination {
@@ -120,9 +148,9 @@
 
 .pagination button {
   border: none;
-  color: var(--color-text-title);
+  color: var(--color-light);
   padding: 8px 12px;
-  margin: 0 4px;
+  margin: 10px 4px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.875rem;
@@ -131,19 +159,12 @@
 }
 
 .pagination button:hover {
-  background-color: var(--color-text-primary);
-  color: var(--color-text-title);
+  background-color: var(--color-primary);
+  color: var(--color-light);
 }
 
 .pagination button.active {
-  background-color: var(--color-text-primary);
-  color: var(--color-text-title);
+  background-color: var(--color-primary);
+  color: var(--color-light);
   font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .projects-container {
-    margin-left: 3rem;
-    align-items: center;
-  }
 }

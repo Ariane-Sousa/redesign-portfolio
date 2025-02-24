@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section-experience">
     <div class="container-experience">
       <section class="timeline">
         <div class="title-wrapper">
@@ -33,16 +33,7 @@
                 </div>
               </div>
               <div class="description">
-                <template v-if="Array.isArray(experience.description)">
-                  <ul>
-                    <li v-for="(item, idx) in experience.description" :key="idx">
-                      {{ item }}
-                    </li>
-                  </ul>
-                </template>
-                <template v-else>
-                  {{ experience.description }}
-                </template>
+                {{ experience.description }}
               </div>
             </div>
           </li>
@@ -62,16 +53,8 @@ const experiences = [
     period: "Set 2024 - Atual",
     location: "São José dos Campos - SP",
     type: "Efetivo",
-    description: [
-      "Desenvolvimento de soluções completas, abrangendo front-end e back-end.",
-      "Atuação com Django (Python) e Vue.js (JavaScript), implementando e otimizando componentes interativos.",
-      "Integração de sistemas IoT, incluindo ativação remota de equipamentos como speakers via Redis, RabbitMQ e MQTT (Mosquitto).",
-      "Trabalho com dados em tempo real, garantindo alta disponibilidade e escalabilidade das aplicações.",
-      "Implementação de métodos do Python para integração e manipulação de arquivos no Amazon S3.",
-      "Uso do Celery para gerenciamento de tarefas assíncronas e processamento distribuído.",
-      "Desenvolvimento e manutenção de players de vídeo em tempo real utilizando Video.js no Vue.js.",
-      "Colaboração com equipes multidisciplinares para entrega de projetos integrados e escaláveis."
-    ]
+    description:
+      "Atuo no desenvolvimento de soluções completas, abrangendo tanto o front-end quanto o back-end. Trabalho com Django (Python) e Vue.js (JavaScript), implementando e otimizando componentes interativos. Além disso, participo da integração de sistemas IoT, incluindo a ativação remota de equipamentos como speakers via Redis, RabbitMQ e MQTT (Mosquitto). Minha atuação também envolve a manipulação de dados em tempo real para garantir a alta disponibilidade e escalabilidade das aplicações. No back-end, desenvolvo métodos em Python para integração e armazenamento de arquivos no Amazon S3 e utilizo Celery para gerenciamento de tarefas assíncronas e processamento distribuído. No front-end, sou responsável pelo desenvolvimento e manutenção de players de vídeo em tempo real utilizando Video.js no Vue.js. Além disso, colaboro com equipes multidisciplinares para garantir a entrega de projetos integrados e escaláveis."
   },
   {
     title: "Desenvolvedora de Software",
@@ -79,28 +62,17 @@ const experiences = [
     period: "Out 2023 - Set 2024",
     location: "São José dos Campos - SP",
     type: "Estágio",
-    description: [
-      "Experiência prática em desenvolvimento front-end e back-end utilizando Django (Python) e Vue.js (JavaScript).",
-      "Participação em projetos reais, contribuindo na implementação e manutenção de componentes Vue.js.",
-      "Colaboração no desenvolvimento de funcionalidades para monitoramento de dados em tempo real.",
-      "Auxílio na integração de sistemas IoT e na comunicação entre dispositivos via RabbitMQ e Redis.",
-      "Suporte na criação de processos assíncronos com Celery para otimização de fluxos internos.",
-      "Implementação de soluções para otimização de processos internos, incluindo automação de tarefas.",
-      "Aprimoramento de habilidades técnicas e colaborativas ao atuar diretamente no ciclo de desenvolvimento de software."
-    ]
+    description:
+      "Durante meu estágio, adquiri experiência prática no desenvolvimento front-end e back-end utilizando Django (Python) e Vue.js (JavaScript). Contribuí para a implementação e manutenção de componentes Vue.js em projetos reais e participei do desenvolvimento de funcionalidades para monitoramento de dados em tempo real. Também auxiliei na integração de sistemas IoT e na comunicação entre dispositivos via RabbitMQ e Redis. No back-end, atuei no suporte à criação de processos assíncronos utilizando Celery para otimizar fluxos internos. Além disso, desenvolvi soluções para automação e otimização de processos internos, aprimorando minhas habilidades técnicas e colaborativas ao longo do ciclo de desenvolvimento de software."
   },
   {
     title: "Monitoramento de Banco de Dados",
     company: "HTI Tecnologia",
     period: "Mar 2023 - Out 2023",
-    location: "São Paulo - SP",
+    location: "São José dos Campos - SP",
     type: "Efetivo",
-    description: [
-      "Monitoramento de bancos de dados para garantir a integridade e o desempenho.",
-      "Levantamento de informações relevantes para suporte e análise técnica.",
-      "Análise de métricas e estatísticas relacionadas ao desempenho e uso de servidores.",
-      "Identificação e resolução de problemas para otimização de recursos."
-    ]
+    description:
+      "Trabalhei com o monitoramento de bancos de dados, garantindo sua integridade e desempenho. Minha atuação envolvia o levantamento de informações relevantes para suporte e análise técnica, além da análise de métricas e estatísticas relacionadas ao uso e desempenho de servidores. Também identifiquei e resolvi problemas para otimizar os recursos e melhorar a eficiência dos sistemas."
   },
   {
     title: "Mecânico de Manutenção",
@@ -108,11 +80,8 @@ const experiences = [
     period: "Fev 2021 - Fev 2023",
     location: "São José dos Campos - SP",
     type: "Aprendiz",
-    description: [
-      "Participação no curso de capacitação profissional em Mecânica de Manutenção pelo SENAI.",
-      "Desenvolvimento de habilidades técnicas em manutenção mecânica, incluindo diagnóstico e reparo de sistemas.",
-      "Aprendizado prático e teórico em ambientes industriais de alta performance."
-    ]
-  },
+    description:
+      "Participei do curso de capacitação profissional em Mecânica de Manutenção pelo SENAI, onde desenvolvi habilidades técnicas em diagnóstico e reparo de sistemas mecânicos. Durante esse período, adquiri experiência prática e teórica em manutenção mecânica em um ambiente industrial de alta performance."
+  }
 ];
 </script>

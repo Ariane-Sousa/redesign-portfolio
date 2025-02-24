@@ -1,0 +1,90 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.563rem;
+}
+
+.contact-container {
+    position: relative;
+    width: 53.125rem;
+    max-height: 45rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 1px;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    color: var(--color-light);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+    color: var(--color-light--1);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.875rem;
+    margin-bottom: 1.188rem;
+}
+
+.input-field {
+    flex: 1;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--color-light);
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-grey);
+    background-color: transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--color-light--1);
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+textarea {
+    height: 15.5rem;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: var(--color-light-1);
+    color: var(--color-primary);
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-family);
+}
+
+.submit-btn:hover {
+    opacity: 0.7;
+}
+
+.submit-btn i {
+    margin-right: 4px;
+}
