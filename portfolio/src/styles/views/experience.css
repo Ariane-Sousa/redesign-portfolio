@@ -143,6 +143,8 @@ li {
 .timeline-item-frame .group-items {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 
     .period, .region, .type{
         display: flex;
@@ -153,5 +155,38 @@ li {
         color: var(--color-light--1);
         font-size: 0.875rem;
         font-weight: var(--font-weight-semibold);
+    }
+}
+
+@media (max-width: 768px) {
+    .container-experience {
+        width: 90%;
+    }
+
+    .icon-box {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon-box i {
+        font-size: 1rem;
+    }
+
+    .experience-title h1{
+        font-size: 1.3rem;
+    }
+    
+    .experience-title h2{
+        font-size: 0.8rem;
+    }
+    
+    .timeline-item:not(:last-child)::before {
+        top: -70px;
+        left: -32px;
+        height: calc(100% + 6.55rem);
+    }
+
+    .timeline-item::after  {
+        left: -35px;
     }
 }

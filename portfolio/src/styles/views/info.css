@@ -172,3 +172,9 @@
 .language-menu li:hover {
   background: var(--color-primary--1);
 }
+
+@media (max-width: 768px) {
+  .container-info {
+    width: 90%;
+  }
+}

@@ -17,8 +17,8 @@
                 <router-link :to="{ name: 'experiences' }" exact-active-class="active">
                     Experiências
                 </router-link>
-                <router-link :to="{ name: 'projects' }" exact-active-class="active">Projeto</router-link>
                 <router-link :to="{ name: 'education' }" exact-active-class="active">Educação</router-link>
+                <router-link :to="{ name: 'projects' }" exact-active-class="active">Projetos</router-link>
                 <router-link v-if="false" :to="{ name: 'contacts' }" exact-active-class="active">Contato</router-link>
             </div>
 

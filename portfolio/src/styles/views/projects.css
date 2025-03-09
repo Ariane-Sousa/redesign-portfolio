@@ -168,3 +168,11 @@
   color: var(--color-light);
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .container-project {
+    width: 80%;
+    max-height: none; 
+
+  }
+}
