@@ -21,7 +21,7 @@
             <h1>{{ project.title }}</h1>
             <h2>{{ project.description }}</h2>
           </div>
-          <div class="see-more">
+          <div class="see-more" @click="viewProject(project)">
             <span>Ver detalhes</span>
             <i class="fa-solid fa-arrow-right" />
           </div>
@@ -34,10 +34,13 @@
       </div>
     </div>
   </div>
+  <ProjectModal v-if="selectedProject" :project="selectedProject" @close="closeModal" />
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
+import ProjectModal from "@/components/ProjectModal.vue";
+
 import "@/styles/views/projects.css";
 import betaImage from "@/assets/projects/beta.jpg";
 import pro4TechImage from "@/assets/projects/pro4tech.jpg";
@@ -54,6 +57,8 @@ const filter = ref("all");
 const hover = ref(null);
 const currentPage = ref(1);
 const itemsPerPage = 6;
+const selectedProject = ref(null);
+
 const projects = [
   { 
     id: 1, 
@@ -138,36 +143,39 @@ const projects = [
   },
 ];
 
-const filteredProjects = computed(() => {
-  let filtered = filter.value === "all" ? projects : projects.filter(project => project.category === filter.value);
-  filtered = filtered.sort((a, b) => new Date(b.actualDate) - new Date(a.actualDate));
-  return filtered;
-});
-
-const totalPages = computed(() => {
-  return Math.ceil(filteredProjects.value.length / itemsPerPage);
-});
+const totalPages = computed(() => Math.ceil(projects.length / itemsPerPage));
 
 const paginatedProjects = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  return filteredProjects.value.slice(start, end);
+  return projects.slice(start, start + itemsPerPage);
 });
-
-const filterProjects = (category) => {
-  filter.value = category;
-  currentPage.value = 1;
-};
 
 const goToPage = (page) => {
   currentPage.value = page;
+};
+
+const openModal = (project) => {
+  selectedProject.value = project;
+};
+
+const closeModal = () => {
+  selectedProject.value = null;
 };
 
 const viewProject = (project) => {
   if (project.url) {
     window.open(project.url, "_blank");
   } else {
-    console.log("URL não definida para o projeto: ", project);
+    console.warn("O projeto não possui um link.");
   }
 };
 </script>
+
+<style scoped>
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+</style>

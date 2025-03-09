@@ -10,12 +10,6 @@
         width: 53.125rem;
         max-height: 45rem;
         margin-top: 2.563rem;
-        overflow-y: scroll;
-        scrollbar-width: none;
-    }
-
-    .container-about::-webkit-scrollbar {
-        display: none;
     }
 
     .about {
@@ -94,6 +88,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 0.875rem;
+        padding-bottom: 2rem;
 
         .projects-header {
             display: flex;

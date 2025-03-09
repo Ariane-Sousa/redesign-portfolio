@@ -19,11 +19,11 @@
                 </router-link>
                 <router-link :to="{ name: 'projects' }" exact-active-class="active">Projeto</router-link>
                 <router-link :to="{ name: 'education' }" exact-active-class="active">Educação</router-link>
-                <router-link :to="{ name: 'contacts' }" exact-active-class="active">Contato</router-link>
+                <router-link v-if="false" :to="{ name: 'contacts' }" exact-active-class="active">Contato</router-link>
             </div>
 
             <div class="utils">
-                <div class="language-dropdown">
+                <div class="language-dropdown" v-if="false">
                     <button @click="toggleLanguageMenu" class="language-btn">
                         <img src="@/assets/icon/language.svg" alt="Idioma" />
                         <span>{{ languages[selectedLanguage] }}</span>
@@ -35,8 +35,8 @@
                 </div>
 
                 <button @click="toggleTheme" class="theme-toggle">
-                    <i v-if="isDarkMode" class="fas fa-moon"></i>
-                    <i v-else class="fas fa-sun"></i>
+                    <!-- <i v-if="isDarkMode" class="fas fa-moon"></i>
+                    <i v-else class="fas fa-sun"></i> -->
                 </button>
             </div>
 
@@ -46,7 +46,7 @@
                 <a href="https://www.linkedin.com/in/ariane-sousa77/" target="_blank" rel="noopener noreferrer">
                     <img src="@/assets/icon/linkedin.svg" alt="LinkedIn" />
                 </a>
-                <a href="mailto:cristine_ariane@outlook.com">
+                <a href="mailto:ariane.crisousa@gmail.com">
                     <img src="@/assets/icon/email.svg" alt="Email" />
                 </a>
                 <a href="https://github.com/Ariane-Sousa" target="_blank" rel="noopener noreferrer">

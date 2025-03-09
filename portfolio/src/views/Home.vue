@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="projects">
+      <div class="projects" v-if="false">
         <div class="projects-header">
           <h1 class="title">Projetos em destaque</h1>
           <div class="group">
